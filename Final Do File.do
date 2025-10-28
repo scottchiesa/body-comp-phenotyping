@@ -1,8 +1,8 @@
-***************************************************************************
-**************ALSPAC BODY COMPOSITION AND CV PHENOTYPES********************
-*************************Authors: Mok & Iyer*******************************
-*********************************2025**************************************
-***************************************************************************
+****************************************************************************
+**************#ALSPAC BODY COMPOSITION AND CV PHENOTYPES#*******************
+*************************Authors: Mok & Iyer********************************
+*********************************2025***************************************
+****************************************************************************
 
 version 19
 clear all
@@ -19,7 +19,7 @@ set maxvar 10000
 cd "S:\ICS_Student_Projects\2021-22\AiL Paper\Paper\Analysis"
 use "ALSPAC+HR merged.dta", clear
 drop _merge
-merge m:1 cidB3076 qlet using "S:\ICS_Student_Projects\2021-22\AiL Paper\archive\ALSPAC+HR merged Jul72023.dta", keepusing(brshr)
+merge m:1 cid**** qlet using "S:\ICS_Student_Projects\2021-22\AiL Paper\archive\ALSPAC+HR merged Jul72023.dta", keepusing(brshr)
 
 duplicates drop
 
@@ -85,9 +85,9 @@ clonevar svr = mriao1svr
 //Drop Four Physiologically Impossible/Improbable Outliers//
 
 drop if bf > 70
-drop if cidB3076 == 15927
-drop if cidB3076 == 8695
-drop if cidB3076 == 10243
+drop if cid***** == 15927
+drop if cid***** == 8695
+drop if cid***** == 10243
 
 //Drop Those Missing Body Composition Measures//
 
